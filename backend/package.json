@@ -4,7 +4,7 @@
   "description": "Flipcard backend will access mysql db from here ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Purushotam",
   "license": "ISC",
