@@ -27,7 +27,6 @@ router.get("/flashcard",(req,res)=>{
                 console.log("Error occured while fetching flashcard ",err.message)
                 return res.json({message:"Fetching flashcard failed.",success:false})
             }else{
-                console.log(result)
                 return res.json({message:"Flashcard created.",flashcards:result,success:true})
             }
         })
@@ -49,7 +48,6 @@ router.delete("/flashcard/:id",(req,res)=>{
                 if (result.affectedRows === 0) {
                     return res.json({ message: "Flashcard not found.", success: false });
                 }
-                console.log(result)
                 return res.json({message:"Flashcard deleted.",success:true,result})
             }
         })
@@ -73,7 +71,6 @@ router.put("/flashcard/:id",(req,res)=>{
                 if (result.affectedRows === 0) {
                     return res.json({ message: "Flashcard not found.", success: false });
                 }
-                console.log(result)
                 return res.json({message:"Flashcard deleted.",success:true,flashcard:result})
             }
         })
